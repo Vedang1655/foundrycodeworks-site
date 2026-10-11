@@ -1,6 +1,6 @@
 :root{
   --bg:#FFFFFF; --bg-alt:#F7F6F3; --surface:#F7F6F3;
-  --fg:#121417; --fg-muted:#4A4844; --fg-dim:#8A8781;
+  --fg:#121417; --fg-muted:#3D3B37; --fg-dim:#6B6862;
   --accent:#0A7366; --accent-soft:rgba(10,115,102,0.1);
   --border:rgba(18,20,23,0.12);
   --font-display:'Archivo','Helvetica Neue',sans-serif;
