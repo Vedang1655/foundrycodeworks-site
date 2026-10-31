@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="20" fill="#0a0d10"/>
+  <path d="M60 18 C57 24 51 30 51 37 A9 9 0 0 0 69 37 C69 30 63 24 60 18 Z" fill="#14C8B0"/>
+  <path d="M35 48 H85 L99 98 H21 Z" fill="#14C8B0"/>
+  <text x="60" y="88" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="900" font-size="34" fill="#0a0d10">FC</text>
+</svg>
