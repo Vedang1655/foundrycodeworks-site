@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://foundrycodeworks.com";
+  const siteUrl = "https://www.foundrycodeworks.com";
 
   return [
     {

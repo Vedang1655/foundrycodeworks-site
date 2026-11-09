@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://foundrycodeworks.com";
+const siteUrl = "https://www.foundrycodeworks.com";
 const title = "Foundry Codeworks | Web & Software Development in Burlington, ON";
 const description =
   "Custom websites and software for growing businesses in Burlington, Oakville, Milton and the Halton region — designed and coded in-house, not resold from a template shop.";
