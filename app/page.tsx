@@ -104,14 +104,17 @@ export default function Page() {
 
       <div id="top" />
       <section className="hero" style={{ borderTop: "none", paddingTop: 64 }}>
-        <p className="eyebrow">Web &amp; software development</p>
-        <h1>We build the software your business actually runs on.</h1>
-        <p className="lede">
+        <div className="hero-glow" aria-hidden="true" />
+        <p className="eyebrow hero-enter">Web &amp; software development</p>
+        <h1 className="hero-enter-2">
+          We build the software your business actually runs on.
+        </h1>
+        <p className="lede hero-enter-3">
           Foundry Codeworks designs and codes websites and custom software
           for growing businesses — built in-house by a developer, not
           resold from a template shop.
         </p>
-        <div className="cta-row">
+        <div className="cta-row hero-enter-4">
           <a className="btn btn-primary" href="#contact">
             Get a free quote
           </a>
@@ -119,7 +122,7 @@ export default function Page() {
             See the work
           </a>
         </div>
-        <div className="meta">
+        <div className="meta hero-enter-4">
           <span>
             <b>Based in</b> Burlington, ON
           </span>
