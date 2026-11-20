@@ -52,6 +52,7 @@ const work = [
     stack: ["SaaS", "Vendor management", "Subscriptions"],
     metric: "3",
     label: "Vendors live",
+    shot: "/work/mealhq.webp",
   },
   {
     title: "Viszlyn",
@@ -59,8 +60,9 @@ const work = [
     domain: "viszlyn.io",
     desc: "A data-visualization site publishing ranked, chart-driven articles on earnings, companies and global stats. Built from scratch for full design control — custom article engine, SEO and a semi-automated publishing pipeline.",
     stack: ["Next.js", "React", "Vercel", "SEO"],
-    metric: "12+",
+    metric: "50+",
     label: "Articles published",
+    shot: "/work/viszlyn.webp",
   },
   {
     title: "Sainath Billing Software",
@@ -70,6 +72,7 @@ const work = [
     stack: ["Desktop app", "Billing", "Client project"],
     metric: "100%",
     label: "Custom-built",
+    shot: "/work/sainath.webp",
   },
 ];
 
@@ -104,14 +107,16 @@ export default function Page() {
 
       <div id="top" />
       <section className="hero" style={{ borderTop: "none", paddingTop: 64 }}>
-        <p className="eyebrow">Web &amp; software development</p>
-        <h1>We build the software your business actually runs on.</h1>
-        <p className="lede">
+        <p className="eyebrow hero-enter">Web &amp; software development</p>
+        <h1 className="hero-enter-2">
+          We build the software your business actually runs on.
+        </h1>
+        <p className="lede hero-enter-3">
           Foundry Codeworks designs and codes websites and custom software
           for growing businesses — built in-house by a developer, not
           resold from a template shop.
         </p>
-        <div className="cta-row">
+        <div className="cta-row hero-enter-4">
           <a className="btn btn-primary" href="#contact">
             Get a free quote
           </a>
@@ -119,7 +124,7 @@ export default function Page() {
             See the work
           </a>
         </div>
-        <div className="meta">
+        <div className="meta hero-enter-4">
           <span>
             <b>Based in</b> Burlington, ON
           </span>
@@ -156,24 +161,53 @@ export default function Page() {
         <div className="work-list">
           {work.map((w) => (
             <div className="work-item" key={w.title}>
-              <div className="work-main">
-                <div className="work-top">
-                  <span className="work-title">{w.title}</span>
-                  <span className="work-status">{w.status}</span>
-                </div>
-                <div className="work-domain">{w.domain}</div>
-                <p className="work-desc">{w.desc}</p>
-                <div className="work-stack">
-                  {w.stack.map((c) => (
-                    <span className="chip" key={c}>
-                      {c}
+              {w.shot ? (
+                <div className="work-shot">
+                  <div className="work-shot-bar">
+                    <span className="work-shot-dots">
+                      <i /> <i /> <i />
                     </span>
-                  ))}
+                    <span className="work-shot-url">{w.domain}</span>
+                  </div>
+                  <img
+                    src={w.shot}
+                    alt={`${w.title} product screenshot`}
+                    loading="lazy"
+                  />
                 </div>
-              </div>
-              <div className="work-metric">
-                <div className="n">{w.metric}</div>
-                <div className="l">{w.label}</div>
+              ) : (
+                <div className="work-shot work-shot-placeholder">
+                  <div className="work-shot-bar">
+                    <span className="work-shot-dots">
+                      <i /> <i /> <i />
+                    </span>
+                    <span className="work-shot-url">{w.domain}</span>
+                  </div>
+                  <div className="work-shot-fallback">
+                    <span>{w.title}</span>
+                  </div>
+                </div>
+              )}
+              <div className="work-body">
+                <div className="work-main">
+                  <div className="work-top">
+                    <span className="work-title">{w.title}</span>
+                    <span className="work-status">{w.status}</span>
+                  </div>
+                  <div className="work-domain">{w.domain}</div>
+                  <p className="work-desc">{w.desc}</p>
+                  <div className="work-stack">
+                    {w.stack.map((c) => (
+                      <span className="chip" key={c}>
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="work-metric">
+                  <div className="n">{w.metric}</div>
+                  <div className="l">{w.label}</div>
+                </div>
               </div>
             </div>
           ))}
