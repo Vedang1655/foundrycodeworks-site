@@ -52,6 +52,7 @@ const work = [
     stack: ["SaaS", "Vendor management", "Subscriptions"],
     metric: "3",
     label: "Vendors live",
+    shot: "/work/mealhq.webp",
   },
   {
     title: "Viszlyn",
@@ -61,6 +62,7 @@ const work = [
     stack: ["Next.js", "React", "Vercel", "SEO"],
     metric: "12+",
     label: "Articles published",
+    shot: "/work/viszlyn.webp",
   },
   {
     title: "Sainath Billing Software",
@@ -70,6 +72,7 @@ const work = [
     stack: ["Desktop app", "Billing", "Client project"],
     metric: "100%",
     label: "Custom-built",
+    shot: null as string | null,
   },
 ];
 
@@ -158,24 +161,53 @@ export default function Page() {
         <div className="work-list">
           {work.map((w) => (
             <div className="work-item" key={w.title}>
-              <div className="work-main">
-                <div className="work-top">
-                  <span className="work-title">{w.title}</span>
-                  <span className="work-status">{w.status}</span>
-                </div>
-                <div className="work-domain">{w.domain}</div>
-                <p className="work-desc">{w.desc}</p>
-                <div className="work-stack">
-                  {w.stack.map((c) => (
-                    <span className="chip" key={c}>
-                      {c}
+              {w.shot ? (
+                <div className="work-shot">
+                  <div className="work-shot-bar">
+                    <span className="work-shot-dots">
+                      <i /> <i /> <i />
                     </span>
-                  ))}
+                    <span className="work-shot-url">{w.domain}</span>
+                  </div>
+                  <img
+                    src={w.shot}
+                    alt={`${w.title} product screenshot`}
+                    loading="lazy"
+                  />
                 </div>
-              </div>
-              <div className="work-metric">
-                <div className="n">{w.metric}</div>
-                <div className="l">{w.label}</div>
+              ) : (
+                <div className="work-shot work-shot-placeholder">
+                  <div className="work-shot-bar">
+                    <span className="work-shot-dots">
+                      <i /> <i /> <i />
+                    </span>
+                    <span className="work-shot-url">{w.domain}</span>
+                  </div>
+                  <div className="work-shot-fallback">
+                    <span>{w.title}</span>
+                  </div>
+                </div>
+              )}
+              <div className="work-body">
+                <div className="work-main">
+                  <div className="work-top">
+                    <span className="work-title">{w.title}</span>
+                    <span className="work-status">{w.status}</span>
+                  </div>
+                  <div className="work-domain">{w.domain}</div>
+                  <p className="work-desc">{w.desc}</p>
+                  <div className="work-stack">
+                    {w.stack.map((c) => (
+                      <span className="chip" key={c}>
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="work-metric">
+                  <div className="n">{w.metric}</div>
+                  <div className="l">{w.label}</div>
+                </div>
               </div>
             </div>
           ))}
