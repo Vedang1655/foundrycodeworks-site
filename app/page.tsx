@@ -60,7 +60,7 @@ const work = [
     domain: "viszlyn.io",
     desc: "A data-visualization site publishing ranked, chart-driven articles on earnings, companies and global stats. Built from scratch for full design control — custom article engine, SEO and a semi-automated publishing pipeline.",
     stack: ["Next.js", "React", "Vercel", "SEO"],
-    metric: "12+",
+    metric: "50+",
     label: "Articles published",
     shot: "/work/viszlyn.webp",
   },
