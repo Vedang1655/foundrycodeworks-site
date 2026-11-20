@@ -77,23 +77,10 @@ nav a:hover::after{right:0}
 }
 
 /* ---------- hero ---------- */
-.hero{position:relative; padding-block:52px 60px; max-width:1080px; margin:0 auto; overflow:hidden}
-.hero-glow{
-  position:absolute; top:-220px; right:-160px; width:560px; height:560px; border-radius:50%;
-  background:radial-gradient(circle at 40% 40%, var(--accent) 0%, rgba(10,115,102,0.22) 38%, rgba(10,115,102,0) 70%);
-  filter:blur(10px); opacity:0.5; z-index:0; pointer-events:none;
-  animation:drift 22s ease-in-out infinite alternate;
-}
-@keyframes drift{
-  0%{ transform:translate(0,0) scale(1); }
-  100%{ transform:translate(-36px,28px) scale(1.08); }
-}
-@media (prefers-reduced-motion: reduce){ .hero-glow{animation:none} }
+.hero{position:relative; padding-block:52px 60px; max-width:1080px; margin:0 auto}
 @media (max-width:640px){
   .hero{padding-block:8px 36px}
-  .hero-glow{display:none}
 }
-.hero > *{position:relative; z-index:1}
 .hero h1{font-size:clamp(34px,6vw,60px); line-height:1.04; max-width:17ch}
 .hero .lede{margin-top:20px; max-width:54ch; font-size:18px; color:var(--fg-muted); line-height:1.65}
 .hero .cta-row{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap}

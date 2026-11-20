@@ -104,7 +104,6 @@ export default function Page() {
 
       <div id="top" />
       <section className="hero" style={{ borderTop: "none", paddingTop: 64 }}>
-        <div className="hero-glow" aria-hidden="true" />
         <p className="eyebrow hero-enter">Web &amp; software development</p>
         <h1 className="hero-enter-2">
           We build the software your business actually runs on.
