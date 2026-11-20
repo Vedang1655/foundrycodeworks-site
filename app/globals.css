@@ -90,8 +90,8 @@ nav a:hover::after{right:0}
 }
 @media (prefers-reduced-motion: reduce){ .hero-glow{animation:none} }
 @media (max-width:640px){
-  .hero{padding-block:16px 40px}
-  .hero-glow{width:160px; height:160px; top:-50px; right:-40px; opacity:0.35}
+  .hero{padding-block:8px 36px}
+  .hero-glow{display:none}
 }
 .hero > *{position:relative; z-index:1}
 .hero h1{font-size:clamp(34px,6vw,60px); line-height:1.04; max-width:17ch}
