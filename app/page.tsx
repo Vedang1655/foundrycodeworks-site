@@ -72,7 +72,7 @@ const work = [
     stack: ["Desktop app", "Billing", "Client project"],
     metric: "100%",
     label: "Custom-built",
-    shot: null as string | null,
+    shot: "/work/sainath.webp",
   },
 ];
 
